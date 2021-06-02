@@ -15,6 +15,9 @@ code {
 button {
   position: absolute;
   top: 30px;
-  left: 30px;
-  font-size: 32px;
+  right: 30px;
+  font-size: 30px;
+  border: 5px;
+  background-color: #f0eeeb;
+  cursor: pointer;
 }
