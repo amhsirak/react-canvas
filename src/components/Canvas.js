@@ -1,21 +1,27 @@
-import React, {useRef, useEffect} from 'react'
+import React, { useEffect } from "react";
+import { useCanvas } from "../contexts/CanvasContext";
 
 const Canvas = () => {
+  const {
+    canvasRef,
+    prepareCanvas,
+    startDrawing,
+    finishDrawing,
+    draw,
+  } = useCanvas();
 
+  useEffect(() => {
+    prepareCanvas();
+  }, []);
 
-    useEffect(() => {
-        
-    }, [])
-
-    return (
-
-        <canvas 
-        onMouseDown={startDrawing}
-        onMouseUp={finishDrawing}
-        onMouseMove={draw}
-        ref = {canvasRef}
-        />
-    )
+  return (
+    <canvas
+      onMouseDown={startDrawing}
+      onMouseUp={finishDrawing}
+      onMouseMove={draw}
+      ref={canvasRef}
+    />
+  );
 }
 
 export default Canvas
