@@ -2,9 +2,12 @@ import React from 'react'
 
 const Canvas = () => {
     return (
-        <div>
-            canvas
-        </div>
+
+        <canvas 
+        onMouseDown={startDrawing}
+        onMouseUp={finishDrawing}
+        onMouseMove={draw}
+        />
     )
 }
 
